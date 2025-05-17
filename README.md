@@ -7,7 +7,7 @@ This project is a Contact Management System developed using Java and MySQL. The 
     • Store contact data in a database for persistence.
     • To apply exception handling and input validation techniques.
     • Ensure data validation and error handling
-## Algorithm and external libraries 
+## Algorithm and external libraries
 ### *Main Algorithms Used:*
     •  On application start, MainFrame calls loadContacts() to fetch all records from the database and display them in a JTable.
     • AddContactFrame allows users to enter contact information, which is then validated and inserted into the MySQL database using an SQL INSERT query.
