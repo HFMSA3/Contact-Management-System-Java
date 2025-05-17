@@ -1,5 +1,5 @@
 # Contact-Management-System-Java
-    This project is a Contact Management System developed using Java and MySQL. The application enables users to add, view, and delete contacts with a simple graphical user interface (GUI) built using Java Swing. Data persistence is handled via a MySQL database connection using JDBC.
+This project is a Contact Management System developed using Java and MySQL. The application enables users to add, view, and delete contacts with a simple graphical user interface (GUI) built using Java Swing. Data persistence is handled via a MySQL database connection using JDBC.
 ## Objectives
     • Create a Java-based application to store and manage contacts information.
     • Implement CRUD (Create, Read, Update, Delete) operations.
@@ -28,28 +28,29 @@
     provides the core functionality to connect Java applications with MySQL databases. 
     It allows opening database connections, executing SQL queries safely using PreparedStatements, and handles transactions and errors to ensure smooth, efficient communication between the Java app and the database.
 ## GUI and Database Usage
-    GUI (Graphical User Interface) : is developed using Java Swing, part of the javax.swing package, which provides components for building desktop applications.
+  GUI (Graphical User Interface) : is developed using Java Swing, part of the javax.swing package, which provides components for building desktop applications.
 ### *Main Window (MainFrame):*
-• Displays contacts in a JTable named tableClients. The table shows four columns: Name, Phone, E-Mail, and Address.
-• The table supports automatic row sorting and has a customized appearance with a dark background and highlighted text for better readability.
-• Two buttons below the table allow the user to manage contacts (AddContactFrame) and (Delete Contact)
+    • Displays contacts in a JTable named tableClients. The table shows four columns: Name, Phone, E-Mail, and Address.
+    • The table supports automatic row sorting and has a customized appearance with a dark background and highlighted text for better readability.
+    • Two buttons below the table allow the user to manage contacts (AddContactFrame) and (Delete Contact)
              
 **Layout Details:** The main window uses a JPanel with a GroupLayout for arranging components vertically: label at the top, buttons in the middle, and the scrollable JTable at the bottom. The GUI uses consistent coloring for an aesthetic look and enhanced usability.
 ### *Database Usage*
 #### 1•  Database System: 
-    MySQL database accessed via JDBC for storing contact information persistently.
+  MySQL database accessed via JDBC for storing contact information persistently.
 #### 2•  Connection Management:
     • Uses a separate class DBConnection (not shown here) to manage connections via DriverManager.getConnection().
     • Database operations use PreparedStatements to securely run SQL queries and avoid SQL injection.
 
-The project works with a database table (assumed name: contacts) with the following columns:
-    **Coloumn Name**    **Data Type**     **Description**
+#### The project works with a database table (assumed name: contacts) with the following columns:
+     Coloumn Name        Data Type       Description
+       
          Name             VARCHAR      Contact's full name
          Phone            VARCHAR      Contact's phone number
          E-mail           VARCHAR      Contact's email addrss
          Address          VARCHAR      Contact's physical address
 #### 3•  Database operations:
-    Loading contacts: On app start, loadContacts() runs a SELECT query to fetch all contacts and populate the JTable ,Adding contacts: New contacts entered in AddContactFrame are inserted into the contacts table via an INSERT query, Deleting contacts: Selected contact is deleted by running a DELETE query matching the name and phone number.
+Loading contacts: On app start, loadContacts() runs a SELECT query to fetch all contacts and populate the JTable ,Adding contacts: New contacts entered in AddContactFrame are inserted into the contacts table via an INSERT query, Deleting contacts: Selected contact is deleted by running a DELETE query matching the name and phone number.
 ## Code Explaining
 ### *Explaination ofJava Swing GUI + JDBC (Database)*
     This code is a GUI application for managing contacts (Add, View, Delete) using:
@@ -65,7 +66,8 @@ The project works with a database table (assumed name: contacts) with the follow
     Calls loadContacts() to show data from the database.
  
 #### 3• Key GUI Components
-    **Component**     ​ **Purpose**
+      Component        ​ Purpose
+      
       tableClients​      Displays contacts in rows (Name, Phone, Email, Address)
       btnAdd​            Opens a new window to add a contact
       btnDelete​         Deletes selected contact from table + database
@@ -106,16 +108,16 @@ The project works with a database table (assumed name: contacts) with the follow
 #### 6• Main Method:
     Runs the form as a standalone window by calling new AddContactFrame().setVisible(true).
 ### *Explanation of DBConnection.java*
-    #### 1. It manages connecting your Java program to a MySQL database.
-    #### 2. package contactsmanagingsystem:Specifies that this class is part of the contactsmanagingsystem package.
-    #### 3. private static final String URL = "jdbc:mysql://localhost:3306/contactsdb";:This is the database URL:
-    #### 4. jdbc:mysql:// means you're using MySQL.
-    #### 5. localhost:3306 means the database server is on your local machine at port 3306 (default MySQL port). contactsdb is the name of your database.
-    #### 6. private static final String USER = "root";:The username for your MySQL database login.
-    #### 7. private static final String PASSWORD = "";:The password for the MySQL user (empty string here).
-    #### 8. public static Connection getConnection() throws SQLException:This method returns a Connection object, which is used to interact with the database.
-    #### 9. It uses DriverManager.getConnection(URL, USER, PASSWORD) to open the connection.
-    #### 10. It can throw an SQLException if something goes wrong (e.g., wrong credentials or database not available).
+  #### 1. It manages connecting your Java program to a MySQL database.
+  #### 2. package contactsmanagingsystem:Specifies that this class is part of the contactsmanagingsystem package.
+  #### 3. private static final String URL = "jdbc:mysql://localhost:3306/contactsdb";:This is the database URL:
+  #### 4. jdbc:mysql:// means you're using MySQL.
+  #### 5. localhost:3306 means the database server is on your local machine at port 3306 (default MySQL port). contactsdb is the name of your database.
+  #### 6. private static final String USER = "root";:The username for your MySQL database login.
+  #### 7. private static final String PASSWORD = "";:The password for the MySQL user (empty string here).
+  #### 8. public static Connection getConnection() throws SQLException:This method returns a Connection object, which is used to interact with the database.
+  #### 9. It uses DriverManager.getConnection(URL, USER, PASSWORD) to open the connection.
+  #### 10. It can throw an SQLException if something goes wrong (e.g., wrong credentials or database not available).
 ## Results
 ![WhatsApp Image 2025-05-17 at 12 38 32_996621a2](https://github.com/user-attachments/assets/fd52cc33-22df-4a1d-9a1f-d93d58f55af7)
 ![WhatsApp Image 2025-05-17 at 12 38 32_16b8495b](https://github.com/user-attachments/assets/9038337f-0d08-40b3-9c36-5fa2a4ff1f03)
@@ -124,6 +126,16 @@ The project works with a database table (assumed name: contacts) with the follow
 ![WhatsApp Image 2025-05-17 at 12 38 33_37230e1f](https://github.com/user-attachments/assets/15696951-762a-4e1b-b9a8-c08ac135d0ee)
 ![WhatsApp Image 2025-05-17 at 12 38 33_0562e63f](https://github.com/user-attachments/assets/43d6dea0-1591-4b95-a305-e08f21fa4bc1)
 
+## Acknowledgments
+This project is part of the university Ptograming II course, supervised by Dr.Ahmed El Anany, Eng. Dina Magdy and Eng. Hussien Mostafa.
+### Credits to team members
+    Team Member            Responsibility
+    
+    1. Mazen Yasser           ​GUI Design
+    2. Jana​ M.Badry           Database Integration +Report
+    3. Jasmine Ali            DBconnection class+invalidation
+    4. Habiba Fekry           GitHub
+    5. Sandy Atef             GUI design+Powerpoint
 
 
 
