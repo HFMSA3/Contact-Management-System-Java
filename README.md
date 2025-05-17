@@ -127,7 +127,7 @@ Loading contacts: On app start, loadContacts() runs a SELECT query to fetch all 
 ![WhatsApp Image 2025-05-17 at 12 38 33_0562e63f](https://github.com/user-attachments/assets/43d6dea0-1591-4b95-a305-e08f21fa4bc1)
 
 ## Acknowledgments
-This project is part of the university Ptograming II course, supervised by Dr.Ahmed El Anany, Eng. Dina Magdy and Eng. Hussien Mostafa.
+This project is part of the university Ptograming II course, supervised by Dr.Ahmed El Anany, Eng. Dina Magdy and Eng. Hussien Mostafa
 ### Credits to team members
     Team Member            Responsibility
     
